@@ -28,7 +28,7 @@ open class AppModule {
     @Provides
     open fun mainApi(): MainApi {
         val retrofit = Retrofit.Builder()
-            .baseUrl("http://192.168.0.15:9999")
+            .baseUrl("https://my-little-chief-server.herokuapp.com")
             .addConverterFactory(GsonConverterFactory.create())
             .addCallAdapterFactory(RxJava3CallAdapterFactory.create())
             .build()
